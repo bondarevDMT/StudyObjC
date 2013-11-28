@@ -64,22 +64,24 @@ NSString *docPath()
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    UITableViewCell *c = [table dequeueReusableCellWithIdentifier:@"cell"]; //TODO @optional отдельно хотел спросить на счет @"cell" и двух обязательныых методах <ITableViewDataSource> (как их реализовывать). Если у самого не получится разобраться к следующей недели 
+    UITableViewCell *c = [table dequeueReusableCellWithIdentifier:@"cell"];
     if (!c) {
-        c = [[UITableViewCell alloc]initWithStyle:UITableViewCellSelectionStyleDefault reuseIdentifier:@"cell"];
+        c = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     NSString *item = [tasks objectAtIndex:[indexPath row]];
     [[c textLabel] setText:item];
     return c;
 }
 
--(void)insert:(id)sender//TODO для чего слово sender? Как-то связано с селектором?
+-(void)insert:(id)sender
  {
  NSString *t = [field text];
  if ([t isEqualToString:@""]) {
      return;
  }
      [tasks addObject:t];
+     [tasks writeToFile:docPath() atomically:YES]; //TODO не получилось записать в файл
+     //[t writeToFile:docPath() atomically:YES encoding:1 error:NULL];
      [table reloadData];
      [field setText:@""];
      [field resignFirstResponder];

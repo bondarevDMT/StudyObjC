@@ -36,10 +36,10 @@
     
 }
 
--(void)push:()sender//TODO что означает ()sender??
+-(void)push:()sender
 {
     BNVTableViewController *tableController = [BNVTableViewController new]; //метод new - аналог alloc init
-    [self.navigationController pushViewController:tableController animated:NO];
+    [self.navigationController pushViewController:tableController animated:NO];//TODO как поставить анимацию?? читал по описанию так и не нашел ни set методов для инициализации анимации.  
 }
 
 - (void)didReceiveMemoryWarning
