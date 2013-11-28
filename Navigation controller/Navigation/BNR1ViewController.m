@@ -25,8 +25,9 @@
     //[button.titleLabel setFont:myFont]; И так тоже не работает
     //button.titleLabel.font = [UIFont systemFontOfSize:40]; //Получается изменить только размер шрифта
     //[button setBackgroundColor:[UIColor whiteColor]]; //Задаю цвет фона
-    [button setFrame:CGRectMake(80, 120, 162, 42)];
     //[button setBackgroundImage:bg forState:UIControlStateNormal];
+    button = [[UIButton alloc] initWithFrame:CGRectMake(80, 120, 162, 42)];
+    [button setBackgroundColor:[UIColor blackColor]];
     [button addTarget:self action:@selector(push:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@"Push me" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -38,7 +39,7 @@
 -(void)push:()sender//TODO что означает ()sender??
 {
     BNVTableViewController *tableController = [BNVTableViewController new]; //метод new - аналог alloc init
-    [self.navigationController pushViewController:tableController animated:NO]; 
+    [self.navigationController pushViewController:tableController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
