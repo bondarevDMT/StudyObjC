@@ -51,7 +51,13 @@ NSString *docPath()
     [button2 setTitle:@"Insert" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(insert:) forControlEvents:UIControlEventTouchUpInside];
     
+    //Фоновая картинка
+    //UIImageView *backImage = [UIImageView alloc];
+    //UIImageView *backImage = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 320, 480)]; //TODO не получилось установить фоновую картинку не пойму в чем проблема?
+    //[backImage initWithImage:[UIImage imageNamed:@"background.png"]];
     
+    
+    //[self.view addSubview:backImage];
     [self.view addSubview:table];
     [self.view addSubview:field];
     [self.view addSubview:button2];

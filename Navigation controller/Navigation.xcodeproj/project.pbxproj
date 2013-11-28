@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840F6921183D2AB3008D404F /* png.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F6920183D2AB3008D404F /* png.png */; };
-		840F6923183D2D00008D404F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F6922183D2D00008D404F /* bg.png */; };
+		8417F35A18475E0D0063FA76 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8417F35918475E0D0063FA76 /* background.png */; };
 		842B7F0B183D148100AE26CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842B7F0A183D148100AE26CC /* Foundation.framework */; };
 		842B7F0D183D148100AE26CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842B7F0C183D148100AE26CC /* CoreGraphics.framework */; };
 		842B7F0F183D148100AE26CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842B7F0E183D148100AE26CC /* UIKit.framework */; };
@@ -36,9 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		840F6920183D2AB3008D404F /* png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = png.png; path = ../../../png.png; sourceTree = "<group>"; };
-		840F6922183D2D00008D404F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../bg.png; sourceTree = "<group>"; };
 		8417F358184752400063FA76 /* BNRChangeColorOfBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRChangeColorOfBackground.h; sourceTree = "<group>"; };
+		8417F35918475E0D0063FA76 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
 		842B7F07183D148100AE26CC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B7F0A183D148100AE26CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		842B7F0C183D148100AE26CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +55,6 @@
 		842B7F2F183D148100AE26CC /* NavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationTests.m; sourceTree = "<group>"; };
 		842B7F39183D152300AE26CC /* BNR1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNR1ViewController.h; sourceTree = "<group>"; };
 		842B7F3A183D152300AE26CC /* BNR1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNR1ViewController.m; sourceTree = "<group>"; };
-		84352ADD183D384000CBBB96 /* Comic Sans MS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comic Sans MS.ttf"; path = "../../../../../../Library/Fonts/Comic Sans MS.ttf"; sourceTree = "<group>"; };
 		84AC6A52183D47FC009C2ECF /* BNVTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNVTableViewController.h; sourceTree = "<group>"; };
 		84AC6A53183D47FC009C2ECF /* BNVTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNVTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,9 +132,7 @@
 		842B7F11183D148100AE26CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84352ADD183D384000CBBB96 /* Comic Sans MS.ttf */,
-				840F6922183D2D00008D404F /* bg.png */,
-				840F6920183D2AB3008D404F /* png.png */,
+				8417F35918475E0D0063FA76 /* background.png */,
 				842B7F12183D148100AE26CC /* Navigation-Info.plist */,
 				842B7F13183D148100AE26CC /* InfoPlist.strings */,
 				842B7F16183D148100AE26CC /* main.m */,
@@ -240,10 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840F6921183D2AB3008D404F /* png.png in Resources */,
+				8417F35A18475E0D0063FA76 /* background.png in Resources */,
 				842B7F15183D148100AE26CC /* InfoPlist.strings in Resources */,
 				842B7F1D183D148100AE26CC /* Images.xcassets in Resources */,
-				840F6923183D2D00008D404F /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
