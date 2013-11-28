@@ -19,6 +19,7 @@
     [[self window]setRootViewController:nav];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [self changeColorOfBackground]; //Использую обязательный метод протокола BNRChangeColorOfBackground
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -50,4 +51,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)changeColorOfBackground //обязательный метод протокола BNRChangeColorOfBackground
+{
+    self.window.backgroundColor = [UIColor blueColor];
+}
 @end

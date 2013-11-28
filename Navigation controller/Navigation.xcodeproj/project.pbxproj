@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		840F6920183D2AB3008D404F /* png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = png.png; path = ../../../png.png; sourceTree = "<group>"; };
 		840F6922183D2D00008D404F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../bg.png; sourceTree = "<group>"; };
+		8417F358184752400063FA76 /* BNRChangeColorOfBackground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRChangeColorOfBackground.h; sourceTree = "<group>"; };
 		842B7F07183D148100AE26CC /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B7F0A183D148100AE26CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		842B7F0C183D148100AE26CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +123,7 @@
 				842B7F1A183D148100AE26CC /* BNRAppDelegate.m */,
 				842B7F39183D152300AE26CC /* BNR1ViewController.h */,
 				842B7F3A183D152300AE26CC /* BNR1ViewController.m */,
+				8417F358184752400063FA76 /* BNRChangeColorOfBackground.h */,
 				84AC6A52183D47FC009C2ECF /* BNVTableViewController.h */,
 				84AC6A53183D47FC009C2ECF /* BNVTableViewController.m */,
 				842B7F1C183D148100AE26CC /* Images.xcassets */,

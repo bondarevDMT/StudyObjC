@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 NSString *docPath(void);
-@interface BNVTableViewController : UIViewController <UITableViewDataSource>
+@interface BNVTableViewController : UIViewController <UITableViewDataSource> 
 {
     UITableView *table;
     UIButton *button2;
