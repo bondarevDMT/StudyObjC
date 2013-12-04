@@ -19,7 +19,7 @@
 		84084FE8184E5AAF00EAC0A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84084FD0184E5AAF00EAC0A7 /* UIKit.framework */; };
 		84084FF0184E5AAF00EAC0A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84084FEE184E5AAF00EAC0A7 /* InfoPlist.strings */; };
 		84084FF2184E5AAF00EAC0A7 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84084FF1184E5AAF00EAC0A7 /* WhereamiTests.m */; };
-		840BD814184F72B1008A2E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BD812184F6E02008A2E08 /* CoreLocation.framework */; };
+		84DD9F1A184F94BB003C4C21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BD812184F6E02008A2E08 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840BD814184F72B1008A2E08 /* CoreLocation.framework in Frameworks */,
+				84DD9F1A184F94BB003C4C21 /* CoreLocation.framework in Frameworks */,
 				84084FCF184E5AAF00EAC0A7 /* CoreGraphics.framework in Frameworks */,
 				84084FD1184E5AAF00EAC0A7 /* UIKit.framework in Frameworks */,
 				84084FCD184E5AAF00EAC0A7 /* Foundation.framework in Frameworks */,

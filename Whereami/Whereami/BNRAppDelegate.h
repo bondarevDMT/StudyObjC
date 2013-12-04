@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface BNRAppDelegate : UIResponder <UIApplicationDelegate>
+@interface BNRAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *locationManager;
 }
 @property (strong, nonatomic) UIWindow *window;
+
+-(void)doSomethingWeird;//метод для работы с отладчиком (проверял вход в метод)
 
 @end

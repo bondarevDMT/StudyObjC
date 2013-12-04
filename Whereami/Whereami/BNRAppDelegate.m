@@ -15,12 +15,39 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     locationManager = [[CLLocationManager alloc] init];//создаю экземпляр класса для определения местоположения
-    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    //[self doSomethingWeird];
+    [locationManager setDelegate:self];//назначаем делегатом locationmanager делегат приложения
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];//меняю свойство для как можно частого обновления местоположения
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];//свойство для точного определения местоположения
+    [locationManager startUpdatingLocation];//начать искать свое местоположение
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+-(void)doSomethingWeird
+{
+    NSLog(@"Line 1");
+    NSLog(@"Line 2");
+    NSLog(@"Line 3");
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+//метод для делегата CLLocationManager (при обновлении местоположения)
+{
+    NSLog(@"%@",newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+//реализация метода если произошла ошибка определения местоположения.
+{
+    NSLog(@"Could not find location: %@", error);
+}
+
+-(void)dealloc
+{
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
