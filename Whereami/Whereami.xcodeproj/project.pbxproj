@@ -20,6 +20,8 @@
 		84084FF0184E5AAF00EAC0A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84084FEE184E5AAF00EAC0A7 /* InfoPlist.strings */; };
 		84084FF2184E5AAF00EAC0A7 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84084FF1184E5AAF00EAC0A7 /* WhereamiTests.m */; };
 		84DD9F1A184F94BB003C4C21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BD812184F6E02008A2E08 /* CoreLocation.framework */; };
+		84DD9F1C184FA267003C4C21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD9F1B184FA267003C4C21 /* MapKit.framework */; };
+		84DD9F1E184FA5A8003C4C21 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DD9F1D184FA5A8003C4C21 /* Window.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		84084FEF184E5AAF00EAC0A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84084FF1184E5AAF00EAC0A7 /* WhereamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiTests.m; sourceTree = "<group>"; };
 		840BD812184F6E02008A2E08 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		84DD9F1B184FA267003C4C21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84DD9F1D184FA5A8003C4C21 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DD9F1C184FA267003C4C21 /* MapKit.framework in Frameworks */,
 				84DD9F1A184F94BB003C4C21 /* CoreLocation.framework in Frameworks */,
 				84084FCF184E5AAF00EAC0A7 /* CoreGraphics.framework in Frameworks */,
 				84084FD1184E5AAF00EAC0A7 /* UIKit.framework in Frameworks */,
@@ -99,6 +104,7 @@
 		84084FCB184E5AAF00EAC0A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84DD9F1B184FA267003C4C21 /* MapKit.framework */,
 				840BD812184F6E02008A2E08 /* CoreLocation.framework */,
 				84084FCC184E5AAF00EAC0A7 /* Foundation.framework */,
 				84084FCE184E5AAF00EAC0A7 /* CoreGraphics.framework */,
@@ -126,6 +132,7 @@
 				84084FD5184E5AAF00EAC0A7 /* InfoPlist.strings */,
 				84084FD8184E5AAF00EAC0A7 /* main.m */,
 				84084FDA184E5AAF00EAC0A7 /* Whereami-Prefix.pch */,
+				84DD9F1D184FA5A8003C4C21 /* Window.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 			files = (
 				84084FD7184E5AAF00EAC0A7 /* InfoPlist.strings in Resources */,
 				84084FDF184E5AAF00EAC0A7 /* Images.xcassets in Resources */,
+				84DD9F1E184FA5A8003C4C21 /* Window.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
