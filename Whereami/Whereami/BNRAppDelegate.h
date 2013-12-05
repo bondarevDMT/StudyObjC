@@ -9,7 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface BNRAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
+@interface BNRAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 {
    CLLocationManager *locationManager; 
     IBOutlet MKMapView *worldView;
@@ -17,6 +17,8 @@
     IBOutlet UITextField *locationTitleFeild;
 }
 @property (strong, nonatomic) UIWindow *window;
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)loc1;
 
 //-(void)doSomethingWeird;//метод для работы с отладчиком (проверял вход в метод)
 
@@ -28,3 +30,5 @@
 //Причина в том что надо было сразу создавать простое приложение с xib. А если я как здесь создал простое приложение cacoa touch то как мне начать работать с xib??
 //TODO Когда изучал главу 4 для определения местоположения я исполььзовал CLLocationManager, а в 5 главе создал MKMapView(как я понимаю могу удалить CLLocationManager). А когда я пишу [worldView setShowsUserLocation:YES] то заставляю mapview определить местоположение пользователя, но ведь view ничего не может кроме отображения. Получается что каждый раз когда я испоьлзую MapView мне всегда надо будет создавать CLLocationManager чтобы он работал на низком уровне и определял местоположение?? И еще в программе я нигде MapView не указываю о существовании CLLocationManager как он получает от него данные?
 //TODO -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation это метод для делегата MKMapView Но от кого получает MKMapView это сообщение?? от центра оповещений? от куда он берет (MKUserLocation *)?? Это сообщение отправляет CLLocationManager??
+//TODO не совсем понял MKAnnatation
+//TODO Начиная с #pragma mark metod for delegate UITextFieldDelegate просто перепечатывал текст (просто чтобы посмотреть что получится) на самом деле у меня так и не получилось сделать зуммирование не понимаю в чем была проблема?? #pragma mark metod for delegate MapView

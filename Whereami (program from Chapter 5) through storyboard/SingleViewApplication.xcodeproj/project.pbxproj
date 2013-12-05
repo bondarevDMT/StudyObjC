@@ -21,6 +21,8 @@
 		841B0E1B18508FEB00A8B1BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841B0DFD18508FEB00A8B1BC /* UIKit.framework */; };
 		841B0E2318508FEB00A8B1BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841B0E2118508FEB00A8B1BC /* InfoPlist.strings */; };
 		841B0E2518508FEB00A8B1BC /* SingleViewApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B0E2418508FEB00A8B1BC /* SingleViewApplicationTests.m */; };
+		841F5C541850D82A00A6C37E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F5C531850D82A00A6C37E /* CoreLocation.framework */; };
+		841F5C561850D88300A6C37E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F5C551850D88300A6C37E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		841B0E2018508FEB00A8B1BC /* SingleViewApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleViewApplicationTests-Info.plist"; sourceTree = "<group>"; };
 		841B0E2218508FEB00A8B1BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		841B0E2418508FEB00A8B1BC /* SingleViewApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleViewApplicationTests.m; sourceTree = "<group>"; };
+		841F5C531850D82A00A6C37E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		841F5C551850D88300A6C37E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841F5C561850D88300A6C37E /* MapKit.framework in Frameworks */,
+				841F5C541850D82A00A6C37E /* CoreLocation.framework in Frameworks */,
 				841B0DFC18508FEB00A8B1BC /* CoreGraphics.framework in Frameworks */,
 				841B0DFE18508FEB00A8B1BC /* UIKit.framework in Frameworks */,
 				841B0DFA18508FEB00A8B1BC /* Foundation.framework in Frameworks */,
@@ -101,6 +107,8 @@
 		841B0DF818508FEB00A8B1BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				841F5C551850D88300A6C37E /* MapKit.framework */,
+				841F5C531850D82A00A6C37E /* CoreLocation.framework */,
 				841B0DF918508FEB00A8B1BC /* Foundation.framework */,
 				841B0DFB18508FEB00A8B1BC /* CoreGraphics.framework */,
 				841B0DFD18508FEB00A8B1BC /* UIKit.framework */,
@@ -461,6 +469,7 @@
 				841B0E2A18508FEB00A8B1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		841B0E2B18508FEB00A8B1BC /* Build configuration list for PBXNativeTarget "SingleViewApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +478,7 @@
 				841B0E2D18508FEB00A8B1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

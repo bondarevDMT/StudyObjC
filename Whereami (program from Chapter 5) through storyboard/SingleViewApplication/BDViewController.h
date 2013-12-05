@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface BDViewController : UIViewController
-
+@interface BDViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+{
+    CLLocationManager *locationManager; 
+    MKMapView *worldView;
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BDViewController.h"
 
 @interface BDAppDelegate : UIResponder <UIApplicationDelegate>
 

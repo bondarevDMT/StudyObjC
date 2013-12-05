@@ -19,9 +19,10 @@
 		84084FE8184E5AAF00EAC0A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84084FD0184E5AAF00EAC0A7 /* UIKit.framework */; };
 		84084FF0184E5AAF00EAC0A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84084FEE184E5AAF00EAC0A7 /* InfoPlist.strings */; };
 		84084FF2184E5AAF00EAC0A7 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84084FF1184E5AAF00EAC0A7 /* WhereamiTests.m */; };
+		841F5C591850EF5D00A6C37E /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F5C581850EF5D00A6C37E /* MapPoint.m */; };
 		84DD9F1A184F94BB003C4C21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BD812184F6E02008A2E08 /* CoreLocation.framework */; };
 		84DD9F1C184FA267003C4C21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD9F1B184FA267003C4C21 /* MapKit.framework */; };
-		84DD9F1E184FA5A8003C4C21 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DD9F1D184FA5A8003C4C21 /* Window.xib */; };
+		84DD9F1E184FA5A8003C4C21 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DD9F1D184FA5A8003C4C21 /* Main.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,10 @@
 		84084FEF184E5AAF00EAC0A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84084FF1184E5AAF00EAC0A7 /* WhereamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiTests.m; sourceTree = "<group>"; };
 		840BD812184F6E02008A2E08 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		841F5C571850EF5D00A6C37E /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		841F5C581850EF5D00A6C37E /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		84DD9F1B184FA267003C4C21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		84DD9F1D184FA5A8003C4C21 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		84DD9F1D184FA5A8003C4C21 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 			children = (
 				84084FDB184E5AAF00EAC0A7 /* BNRAppDelegate.h */,
 				84084FDC184E5AAF00EAC0A7 /* BNRAppDelegate.m */,
+				841F5C571850EF5D00A6C37E /* MapPoint.h */,
+				841F5C581850EF5D00A6C37E /* MapPoint.m */,
 				84084FDE184E5AAF00EAC0A7 /* Images.xcassets */,
 				84084FD3184E5AAF00EAC0A7 /* Supporting Files */,
 			);
@@ -130,8 +135,8 @@
 			children = (
 				84084FD4184E5AAF00EAC0A7 /* Whereami-Info.plist */,
 				84084FD5184E5AAF00EAC0A7 /* InfoPlist.strings */,
+				84DD9F1D184FA5A8003C4C21 /* Main.xib */,
 				84084FD8184E5AAF00EAC0A7 /* main.m */,
-				84DD9F1D184FA5A8003C4C21 /* Window.xib */,
 				84084FDA184E5AAF00EAC0A7 /* Whereami-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -233,7 +238,7 @@
 			files = (
 				84084FD7184E5AAF00EAC0A7 /* InfoPlist.strings in Resources */,
 				84084FDF184E5AAF00EAC0A7 /* Images.xcassets in Resources */,
-				84DD9F1E184FA5A8003C4C21 /* Window.xib in Resources */,
+				84DD9F1E184FA5A8003C4C21 /* Main.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +259,7 @@
 			files = (
 				84084FD9184E5AAF00EAC0A7 /* main.m in Sources */,
 				84084FDD184E5AAF00EAC0A7 /* BNRAppDelegate.m in Sources */,
+				841F5C591850EF5D00A6C37E /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

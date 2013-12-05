@@ -7,22 +7,19 @@
 //
 
 #import "BNRAppDelegate.h"
-
+#import "MapPoint.h"
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     locationManager = [[CLLocationManager alloc] init];//создаю экземпляр класса для определения местоположения
-    //[self doSomethingWeird];// использовал при изучении работы с отладчиком (вход в метод)
-    [locationManager setDelegate:self];//назначаем делегатом locationmanager делегат приложения
+    //[self doSomethingWeird];// использовал при изучении работы с отладчиком (вход в /метод)
+   [locationManager setDelegate:self];//назначаем делегатом locationmanager делегат приложения
     [locationManager setDistanceFilter:kCLDistanceFilterNone];//меняю свойство для как можно частого обновления местоположения
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];//свойство для точного определения местоположения
-   // [locationManager startUpdatingLocation];//начать искать свое местоположение //Использовал для первоначальной работы для определения местоположения, когда еще не был создан MKMapView теперь запускаю поиск местоположения на карте
-    [worldView setShowsUserLocation:YES];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+   [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];//свойство для точного определения местоположения
+  // [locationManager startUpdatingLocation];//начать искать свое местоположение //Использовал для первоначальной работы для определения местоположения, когда еще не был создан MKMapView теперь запускаю поиск местоположения на карте
+    worldView.showsUserLocation = YES;
+    //[worldView setShowsUserLocation:YES];
     return YES;
 }
 /*-(void)doSomethingWeird
@@ -32,28 +29,66 @@
     NSLog(@"Line 3");
 }*/
 
+#pragma mark metod for delegate MapView
 
--(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation //метод для делегата MapView
 {
     CLLocationCoordinate2D loc = [userLocation coordinate];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
     [worldView setRegion:region animated:YES];
 }
 
-
-/*-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-//метод для делегата CLLocationManager (при обновлении местоположения)
+#pragma mark metod for delegate CLLocation
+//метод что делать при обновлении местоположения
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"%@",newLocation);
-}*/
-
-/*-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+    NSTimeInterval t = [[newLocation timestamp]timeIntervalSinceNow];
+    if (t< -180) {
+        return;
+    }
+    [self foundLocation:newLocation];
+}
 //реализация метода если произошла ошибка определения местоположения.
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
-}*/
+}
+
+#pragma mark metod for delegate UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self findLocation];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark metod for UITextField
+
+-(void)findLocation
+{
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationTitleFeild  setHidden:YES];
+}
+-(void)foundLocation:(CLLocation *)loc1
+{
+    CLLocationCoordinate2D coord = [loc1 coordinate];
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:coord title:[locationTitleFeild text]];
+    [worldView addAnnotation:mp];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    [worldView setRegion:region animated:YES];
+    [locationTitleFeild setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleFeild setHidden:NO];
+    [locationManager stopUpdatingLocation];
+}
 
 
+
+
+#pragma mark metod APPDelegate
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -81,5 +116,4 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 @end
