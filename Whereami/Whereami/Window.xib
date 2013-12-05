@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <customObject id="d6E-sm-oQP" userLabel="APP Delegate" customClass="BNRAppDelegate">
+        <customObject id="d6E-sm-oQP" userLabel="BNRAppDelegate" customClass="BNRAppDelegate">
             <connections>
                 <outlet property="activityIndicator" destination="Oxi-DV-Dgp" id="Sxb-8n-WZa"/>
                 <outlet property="locationTitleFeild" destination="DH5-ep-fvQ" id="LhK-uf-jVt"/>

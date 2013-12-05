@@ -15,7 +15,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     locationManager = [[CLLocationManager alloc] init];//создаю экземпляр класса для определения местоположения
-    //[self doSomethingWeird];
+    //[self doSomethingWeird];// использовал при изучении работы с отладчиком (вход в метод)
     [locationManager setDelegate:self];//назначаем делегатом locationmanager делегат приложения
     [locationManager setDistanceFilter:kCLDistanceFilterNone];//меняю свойство для как можно частого обновления местоположения
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];//свойство для точного определения местоположения
@@ -25,11 +25,19 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
--(void)doSomethingWeird
+/*-(void)doSomethingWeird
 {
     NSLog(@"Line 1");
     NSLog(@"Line 2");
     NSLog(@"Line 3");
+}*/
+
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:YES];
 }
 
 
