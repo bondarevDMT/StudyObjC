@@ -131,8 +131,8 @@
 				84084FD4184E5AAF00EAC0A7 /* Whereami-Info.plist */,
 				84084FD5184E5AAF00EAC0A7 /* InfoPlist.strings */,
 				84084FD8184E5AAF00EAC0A7 /* main.m */,
-				84084FDA184E5AAF00EAC0A7 /* Whereami-Prefix.pch */,
 				84DD9F1D184FA5A8003C4C21 /* Window.xib */,
+				84084FDA184E5AAF00EAC0A7 /* Whereami-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

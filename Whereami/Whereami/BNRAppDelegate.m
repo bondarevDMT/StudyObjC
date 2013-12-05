@@ -41,23 +41,18 @@
 }
 
 
--(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+/*-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 //метод для делегата CLLocationManager (при обновлении местоположения)
 {
     NSLog(@"%@",newLocation);
-}
+}*/
 
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+/*-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 //реализация метода если произошла ошибка определения местоположения.
 {
     NSLog(@"Could not find location: %@", error);
-}
+}*/
 
-
--(void)dealloc
-{
-    
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
